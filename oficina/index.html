@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sistema da Oficina · Orçamento em PDF, OS e revisão no WhatsApp</title>
+  <meta name="description" content="Sistema simples para oficina mecânica: orçamento e OS em PDF com 1 clique, envio no WhatsApp, lembrete de revisão e painel do mês. R$ 67, pagamento único, sem mensalidade.">
+  <meta property="og:title" content="Sistema da Oficina: tua oficina sem caderno">
+  <meta property="og:description" content="Orçamento em PDF, OS, WhatsApp e lembrete de revisão. R$ 67, uma vez só.">
+  <meta name="theme-color" content="#1238ff">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <script type="module" crossorigin src="./assets/index-4RCoAnhT.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CP_zr4-T.css">
+</head>
+<body>
+  <a class="pular" href="#servicos">Pular para o que o sistema faz</a>
+
+  <header class="nav" data-tema="azul">
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="menu"><span class="sr">Abrir o menu</span><i></i><i></i></button>
+    <a class="nav__logo larga" href="#inicio" aria-label="Sistema da Oficina, voltar ao início">Oficina</a>
+    <a class="nav__cta" href="#comprar">Comprar</a>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="Menu" hidden>
+    <ul class="menu__lista">
+      <li><a href="#servicos">O sistema</a></li>
+      <li><a href="#trabalhos">Por dentro</a></li>
+      <li><a href="#video">Vídeo</a></li>
+      <li><a href="#preco">Preço</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a href="#comprar">Comprar</a></li>
+    </ul>
+    <p class="menu__pe">R$ 67, uma vez só · Garantia de 7 dias · Pagamento pela Kiwify</p>
+  </nav>
+
+  <main>
+    <!-- Cena presa: hero → passagem → mapa do sistema. O carro é o mesmo do começo ao fim (canvas .palco). -->
+    <section class="cena" id="inicio" data-cena aria-label="Início">
+      <div class="cena__fixa">
+        <div class="abertura" aria-hidden="true"><div class="abertura__faixa"></div></div>
+
+        <div class="hero">
+          <p class="hero__marca larga" aria-hidden="true"><span>O</span><span>F</span><span>I</span><span>C</span><span>I</span><span>N</span><span>A</span></p>
+          <div class="hero__vaga" aria-hidden="true"></div>
+          <div class="hero__cupula" aria-hidden="true"></div>
+          <div class="hero__texto">
+            <h1 class="hero__titulo larga">Orçamento, OS e revisão.<br>Tua oficina sem caderno.</h1>
+            <a class="botao botao--claro" href="#comprar"><span>Quero o meu por R$ 67</span><i class="botao__seta" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="mapa fundo-claro" id="servicos">
+          <div class="mapa__papel" aria-hidden="true"></div>
+          <div class="mapa__vaga" aria-hidden="true"></div>
+          <h2 class="mapa__titulo larga">Da placa<br>à revisão.</h2>
+          <ol class="mapa__lista" aria-label="O que o sistema faz">
+            <li class="servico" data-zona="lavagem" data-ancora="0.30,0.42" data-lado="d">
+              <h3 class="servico__nome larga">Busca pela placa</h3>
+              <p>Digita a placa e o cliente aparece, com o carro e todo o histórico de serviços.</p>
+              <span class="servico__preco">histórico por placa</span>
+            </li>
+            <li class="servico" data-zona="polimento" data-ancora="0.08,-0.40" data-lado="d">
+              <h3 class="servico__nome larga">Orçamento em PDF</h3>
+              <p>Peças e mão de obra somam sozinhas. O PDF sai com o nome da tua oficina.</p>
+              <span class="servico__preco">com um clique</span>
+            </li>
+            <li class="servico" data-zona="vitrificacao" data-ancora="-0.30,-0.10" data-lado="e">
+              <h3 class="servico__nome larga">Direto no WhatsApp</h3>
+              <p>Um botão abre a conversa com o cliente, e a mensagem com o orçamento já vem escrita.</p>
+              <span class="servico__preco">mensagem pronta</span>
+            </li>
+            <li class="servico" data-zona="ppf" data-ancora="-0.44,0.22" data-lado="e">
+              <h3 class="servico__nome larga">Ordem de serviço</h3>
+              <p>Do orçamento à entrega: aprovado, em serviço, pronto e entregue. Tu sabes onde está cada carro.</p>
+              <span class="servico__preco">status de cada carro</span>
+            </li>
+            <li class="servico" data-zona="interior" data-ancora="-0.02,0.20" data-lado="d">
+              <h3 class="servico__nome larga">Painel do mês</h3>
+              <p>Faturamento, ticket médio, quanto falta receber e os carros que estão na oficina.</p>
+              <span class="servico__preco">tudo num olhar</span>
+            </li>
+            <li class="servico" data-zona="farois" data-ancora="-0.44,-0.33" data-lado="e">
+              <h3 class="servico__nome larga">Lembrete de revisão</h3>
+              <p>A próxima troca de óleo por data e por KM. Quando estiver perto de vencer, o sistema avisa.</p>
+              <span class="servico__preco">o cliente volta</span>
+            </li>
+          </ol>
+          <svg class="mapa__fio" aria-hidden="true"><path pathLength="1000"/><circle r="4"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao trabalhos" id="trabalhos" data-cena aria-labelledby="trabalhos-titulo">
+      <div class="trabalhos__fixa">
+        <p class="trabalhos__palavra larga" aria-hidden="true">Por dentro</p>
+        <h2 class="trabalhos__titulo larga" id="trabalhos-titulo">As telas<br>do sistema.</h2>
+        <ul class="trabalhos__trilho">
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/painel.jpg"></div><figcaption><b>Painel</b><span>Faturamento e revisões</span></figcaption></figure></li>
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/nova.jpg"></div><figcaption><b>Nova OS</b><span>Placa, peças e mão de obra</span></figcaption></figure></li>
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/pdf.jpg"></div><figcaption><b>Orçamento</b><span>PDF e WhatsApp</span></figcaption></figure></li>
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/os.jpg"></div><figcaption><b>Ordens de serviço</b><span>Status de cada carro</span></figcaption></figure></li>
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/clientes.jpg"></div><figcaption><b>Clientes</b><span>Histórico por placa</span></figcaption></figure></li>
+          <li class="carta"><figure><div class="carta__foto" data-foto="oficina/revisoes.jpg"></div><figcaption><b>Revisões</b><span>Lembrete no WhatsApp</span></figcaption></figure></li>
+        </ul>
+        <a class="botao botao--escuro trabalhos__mais" href="#video"><span>Ver funcionando</span><i class="botao__seta" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="secao video" id="video" aria-labelledby="video-titulo">
+      <div class="video__grade">
+        <div class="video__tela"><video src="./video.mp4" poster="./img/oficina/video-capa.jpg" controls playsinline preload="none"></video></div>
+        <div class="video__legenda">
+          <p class="estudio__rotulo">Em 35 segundos</p>
+          <h2 class="estudio__titulo larga" id="video-titulo">O sistema<br>funcionando.</h2>
+          <p class="estudio__texto">Tela de verdade: uma OS nova, o orçamento em PDF, o envio no WhatsApp e o lembrete de revisão. Funciona no computador e no celular, na tua conta Google.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao preco" id="preco" aria-labelledby="preco-titulo">
+      <div class="preco__topo">
+        <h2 class="parede__titulo larga" id="preco-titulo">Paga uma vez.<br>O sistema é teu.</h2>
+        <p class="parede__nota">Sem mensalidade</p>
+      </div>
+      <div class="preco__grade">
+        <div class="preco__card preco__card--eles"><p>Sistemas de oficina</p><b class="larga">R$ 50–150</b><span>todo mês</span></div>
+        <div class="preco__card preco__card--nos"><p>Sistema da Oficina</p><b class="larga">R$ 67</b><span>uma vez só</span></div>
+      </div>
+      <ul class="preco__lista">
+        <li>Os dados ficam na tua própria conta Google. Ninguém mais tem acesso, nem quem vendeu.</li>
+        <li>Abre no computador e no celular, pelo navegador.</li>
+        <li>Garantia de 7 dias: não gostou, pede o reembolso pela Kiwify.</li>
+      </ul>
+    </section>
+
+    <section class="secao duvidas fundo-claro" id="duvidas" aria-labelledby="duvidas-titulo">
+      <h2 class="duvidas__titulo larga" id="duvidas-titulo">Dúvidas</h2>
+      <div class="duvidas__lista">
+        <details class="duvida"><summary><span>Preciso entender de computador?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>Não. Se tu usas WhatsApp, tu consegues usar o sistema.</p></div></details>
+        <details class="duvida"><summary><span>Funciona no celular?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>Sim. Tu abres pelo link no navegador do celular e dá para salvar como atalho na tela inicial.</p></div></details>
+        <details class="duvida"><summary><span>Tenho que pagar alguma coisa todo mês?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>Não. Só precisa de uma conta Google, que é gratuita.</p></div></details>
+        <details class="duvida"><summary><span>Como recebo o sistema?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>Logo depois do pagamento chega um link no teu e-mail. Tu clicas em "Fazer uma cópia", o sistema vai para a tua conta Google e é só colocar o nome, o endereço e o telefone da oficina.</p></div></details>
+        <details class="duvida"><summary><span>O Google mostra um aviso na primeira vez. É normal?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>É. Como o sistema roda só na tua conta, o Google pede a tua autorização uma vez. O passo a passo mostra onde clicar.</p></div></details>
+        <details class="duvida"><summary><span>E se eu não gostar?</span><i aria-hidden="true"></i></summary><div class="duvida__resposta"><p>Tu tens 7 dias de garantia. Pede o reembolso pela própria Kiwify, sem perguntas.</p></div></details>
+      </div>
+    </section>
+
+    <section class="fecho" id="comprar" data-fecho aria-labelledby="fecho-titulo">
+      <div class="fecho__card">
+        <h2 class="fecho__titulo larga" id="fecho-titulo"><span>Tua oficina</span> <span>em ordem</span> <span>hoje.</span></h2>
+        <div class="fecho__vaga" aria-hidden="true"></div>
+        <div class="fecho__acoes">
+          <a class="botao botao--claro" href="#comprar" data-checkout><span>Quero o Sistema da Oficina</span><i class="botao__seta" aria-hidden="true"></i></a>
+          <p>R$ 67, uma vez só · Garantia de 7 dias</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="secao rodape">
+    <div class="rodape__grade">
+      <div class="rodape__marca">
+        <p class="larga">Oficina</p>
+        <p>Sistema da Oficina: orçamento, OS e revisão no WhatsApp. Uma linha da Negócio em Ordem.</p>
+      </div>
+      <div><h3>O sistema</h3><ul><li><a href="#servicos">Busca pela placa</a></li><li><a href="#servicos">Orçamento em PDF</a></li><li><a href="#servicos">Ordem de serviço</a></li><li><a href="#servicos">Lembrete de revisão</a></li></ul></div>
+      <div><h3>Compra</h3><ul><li><a href="#preco">Preço</a></li><li><a href="#duvidas">Garantia</a></li><li><a href="#comprar">Comprar</a></li></ul></div>
+      <div><h3>Negócio em Ordem</h3><ul><li><a href="../">Outros sistemas</a></li><li><a href="../#sob-medida">Sistema sob medida</a></li></ul></div>
+    </div>
+    <div class="rodape__fim">
+      <p>© 2026 Negócio em Ordem · Pagamento seguro pela Kiwify</p>
+      <p>Modelo 3D: <a href="https://sketchfab.com/3d-models/aston-martin-db11-0ce56f01b1ff40b3a4e36bc56873dbc7" target="_blank" rel="noopener">“Aston Martin db11”</a>, de <a href="https://sketchfab.com/BlackSnow02" target="_blank" rel="noopener">Black Snow</a>, licença <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></p>
+    </div>
+    <p class="rodape__nome larga" aria-hidden="true">Oficina</p>
+  </footer>
+
+  <canvas class="palco" aria-hidden="true"></canvas>
+  <script>
+    /* === CONFIGURAÇÃO: cole aqui o link do checkout da Kiwify quando o produto for criado === */
+    window.CHECKOUT = "";
+  </script>
+</body>
+</html>
