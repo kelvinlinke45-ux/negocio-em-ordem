@@ -11,8 +11,8 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#1238ff">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <script type="module" crossorigin src="./assets/index-B6PE06eL.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-7uU6B6SQ.css">
+  <script type="module" crossorigin src="./assets/index-DmGraOWM.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DFLW2Snr.css">
 </head>
 <body>
   <a class="pular" href="#servicos">Pular para o que o sistema faz</a>
@@ -36,59 +36,27 @@
   </nav>
 
   <main>
-    <!-- Cena presa: hero → passagem → mapa do sistema. O carro é o mesmo do começo ao fim (canvas .palco). -->
-    <section class="cena" id="inicio" data-cena aria-label="Início">
-      <div class="cena__fixa">
-        <div class="abertura" aria-hidden="true"><div class="abertura__faixa"></div></div>
-
-        <div class="hero">
-          <p class="hero__marca larga" aria-hidden="true"><span>O</span><span>F</span><span>I</span><span>C</span><span>I</span><span>N</span><span>A</span></p>
-          <div class="hero__vaga" aria-hidden="true"></div>
-          <div class="hero__cupula" aria-hidden="true"></div>
-          <div class="hero__texto">
-            <h1 class="hero__titulo larga">Orçamento, OS e revisão.<br>Tua oficina sem caderno.</h1>
-            <a class="botao botao--claro" href="#comprar"><span>Quero o meu por R$ 67</span><i class="botao__seta" aria-hidden="true"></i></a>
-          </div>
+    <!-- Cena da mesa: bancada de oficina em 3D; o computador mostra cada tela do sistema (src/mesa/mesa.js) -->
+    <section class="mesa" id="inicio" aria-label="Início">
+      <div class="mesa__fixa">
+        <canvas class="mesa__tela" aria-hidden="true"></canvas>
+        <div class="mesa__abre">
+          <h1 class="larga">Orçamento, OS e revisão.<br>Tua oficina sem caderno.</h1>
+          <p>Da placa do carro ao lembrete de revisão: o Sistema da Oficina roda no computador da bancada e no celular, no Google Planilhas.</p>
+          <a class="botao botao--claro" href="#comprar"><span>Quero o meu por R$ 67</span><i class="botao__seta" aria-hidden="true"></i></a>
         </div>
-
-        <div class="mapa fundo-claro" id="servicos">
-          <div class="mapa__papel" aria-hidden="true"></div>
-          <div class="mapa__vaga" aria-hidden="true"></div>
-          <h2 class="mapa__titulo larga">Da placa<br>à revisão.</h2>
-          <ol class="mapa__lista" aria-label="O que o sistema faz">
-            <li class="servico" data-zona="lavagem" data-ancora="0.30,0.42" data-lado="d">
-              <h3 class="servico__nome larga">Busca pela placa</h3>
-              <p>Digita a placa e o cliente aparece, com o carro e todo o histórico de serviços.</p>
-              <span class="servico__preco">histórico por placa</span>
-            </li>
-            <li class="servico" data-zona="polimento" data-ancora="0.08,-0.40" data-lado="d">
-              <h3 class="servico__nome larga">Orçamento em PDF</h3>
-              <p>Peças e mão de obra somam sozinhas. O PDF sai com o nome da tua oficina.</p>
-              <span class="servico__preco">com um clique</span>
-            </li>
-            <li class="servico" data-zona="vitrificacao" data-ancora="-0.30,-0.10" data-lado="e">
-              <h3 class="servico__nome larga">Direto no WhatsApp</h3>
-              <p>Um botão abre a conversa com o cliente, e a mensagem com o orçamento já vem escrita.</p>
-              <span class="servico__preco">mensagem pronta</span>
-            </li>
-            <li class="servico" data-zona="ppf" data-ancora="-0.44,0.22" data-lado="e">
-              <h3 class="servico__nome larga">Ordem de serviço</h3>
-              <p>Do orçamento à entrega: aprovado, em serviço, pronto e entregue. Tu sabes onde está cada carro.</p>
-              <span class="servico__preco">status de cada carro</span>
-            </li>
-            <li class="servico" data-zona="interior" data-ancora="-0.02,0.20" data-lado="d">
-              <h3 class="servico__nome larga">Painel do mês</h3>
-              <p>Faturamento, ticket médio, quanto falta receber e os carros que estão na oficina.</p>
-              <span class="servico__preco">tudo num olhar</span>
-            </li>
-            <li class="servico" data-zona="farois" data-ancora="-0.44,-0.33" data-lado="e">
-              <h3 class="servico__nome larga">Lembrete de revisão</h3>
-              <p>A próxima troca de óleo por data e por KM. Quando estiver perto de vencer, o sistema avisa.</p>
-              <span class="servico__preco">o cliente volta</span>
-            </li>
-          </ol>
-          <svg class="mapa__fio" aria-hidden="true"><path pathLength="1000"/><circle r="4"/></svg>
-        </div>
+        <p class="mesa__passo" aria-hidden="true"></p>
+        <div class="mesa__barra" aria-hidden="true"></div>
+        <svg class="mesa__fio" aria-hidden="true"><path d=""/><circle r="5" cx="-20" cy="-20"/></svg>
+        <div class="mesa__cartao" aria-hidden="true"><div class="mesa__n"></div><h3 class="larga"></h3><p></p><span class="mesa__tag"></span></div>
+        <ol class="mesa__lista sr" id="servicos" aria-label="O que o sistema faz">
+          <li><h3>Busca pela placa</h3><p>Digita a placa e o cliente aparece, com o carro e todo o histórico de serviços.</p></li>
+          <li><h3>Orçamento em PDF</h3><p>Peças e mão de obra somam sozinhas. O PDF sai com o nome da tua oficina.</p></li>
+          <li><h3>Direto no WhatsApp</h3><p>Um botão abre a conversa com o cliente, e a mensagem com o orçamento já vem escrita.</p></li>
+          <li><h3>Ordem de serviço</h3><p>Do orçamento à entrega: aprovado, em serviço, pronto e entregue. Tu sabes onde está cada carro.</p></li>
+          <li><h3>Painel do mês</h3><p>Faturamento, ticket médio, quanto falta receber e os carros que estão na oficina.</p></li>
+          <li><h3>Lembrete de revisão</h3><p>A próxima troca de óleo por data e por KM. Quando estiver perto de vencer, o sistema avisa.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -150,7 +118,6 @@
     <section class="fecho" id="comprar" data-fecho aria-labelledby="fecho-titulo">
       <div class="fecho__card">
         <h2 class="fecho__titulo larga" id="fecho-titulo"><span>Tua oficina</span> <span>em ordem</span> <span>hoje.</span></h2>
-        <div class="fecho__vaga" aria-hidden="true"></div>
         <div class="fecho__acoes">
           <a class="botao botao--claro" href="#comprar" data-checkout><span>Quero o Sistema da Oficina</span><i class="botao__seta" aria-hidden="true"></i></a>
           <p>R$ 67, uma vez só · Garantia de 7 dias</p>
@@ -171,12 +138,10 @@
     </div>
     <div class="rodape__fim">
       <p>© 2026 Negócio em Ordem · Pagamento seguro pela Kiwify</p>
-      <p>Modelo 3D: <a href="https://sketchfab.com/3d-models/aston-martin-db11-0ce56f01b1ff40b3a4e36bc56873dbc7" target="_blank" rel="noopener">“Aston Martin db11”</a>, de <a href="https://sketchfab.com/BlackSnow02" target="_blank" rel="noopener">Black Snow</a>, licença <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a></p>
     </div>
     <p class="rodape__nome larga" aria-hidden="true">Oficina</p>
   </footer>
 
-  <canvas class="palco" aria-hidden="true"></canvas>
   <script>
     /* === CONFIGURAÇÃO: cole aqui o link do checkout da Kiwify quando o produto for criado === */
     window.CHECKOUT = "https://pay.kiwify.com.br/V57jU0e";
